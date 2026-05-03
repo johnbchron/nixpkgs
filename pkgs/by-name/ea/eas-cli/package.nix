@@ -10,12 +10,12 @@
   python3,
 }:
 let
-  version = "18.7.0";
+  version = "18.9.1";
   src = fetchFromGitHub {
     owner = "expo";
     repo = "eas-cli";
     rev = "v${version}";
-    hash = "sha256-Z+PtS88Rv9Vv6FA15KxSBWCmOtwmTqO1etgCV7WaTXo=";
+    hash = "sha256-u3SgKXHRYOryg5ip4MekUnujwDVKt48raRWFEcZ2v48=";
   };
   missingHashes = ./missing-hashes.json;
 in
@@ -27,7 +27,7 @@ stdenv.mkDerivation (finalAttrs: {
 
   yarnOfflineCache = yarn-berry_4.fetchYarnBerryDeps {
     inherit src missingHashes;
-    hash = "sha256-ZlbCHWEwVaYCfzowrm1qrM1MpLo5vNmEG5bWzWT/cTU=";
+    hash = "sha256-3vf1G6RBOSc0dx7b6S4pjN6zn8g+nvmaYUT9MQRxm9s=";
   };
 
   nativeBuildInputs = [
